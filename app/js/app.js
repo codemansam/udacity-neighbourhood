@@ -224,8 +224,10 @@ function makeMarkers() {
 	for (var i = 0; i < locations.length; i++) {
 		// Get the position from the location array.
 		var position = locations[i].location;
+		// Get the title from the locations array.
 		var title = locations[i].title;
-		// Create a marker per location, and put into markers array.
+		// Create a marker for each location and
+		// use the title and lat lng coordinates from each location.
 		var marker = new google.maps.Marker({
 		position: position,
 		title: title,
