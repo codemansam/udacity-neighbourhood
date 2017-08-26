@@ -185,6 +185,8 @@ function initMap() {
 	  zoomControl: false
 	});
 }
+
+// Makes sure the window has loaded before trying to initialize map.
 window.onload = function() {
 
 	initMap();	
