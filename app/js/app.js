@@ -1,8 +1,9 @@
 // Declare some variable I will need.
 
 var map;
-var markers = [];
-var styles = [];
+var markers = [];  // Will hold the markers for the restaurants.
+var styles = []; // will hold the map styles.
+var locations = []; // will hold location information for the restaurants.
 
 // Make map look cooler with this style (style 94/san-andreas) from snazzymaps.com
 styles =
@@ -176,6 +177,15 @@ styles =
         ]
     }
 ]
+
+var locations = [
+  {title: 'Dominoes', location: {lat: -36.790816, lng: 174.687644}},
+  {title: 'Cafe Bon Bon', location: {lat: -36.791718, lng: 174.687397}},
+  {title: 'Crustys Pizza Burger', location: {lat: -36.792915, lng: 174.661455}},
+  {title: 'Hobsonville Sushi', location: {lat: -36.793456, lng: 174.660227}},
+  {title: 'Indian Summer', location: {lat: -36.792735, lng: 174.660795}},
+  {title: 'House of Chocolate', location: {lat: -36.792365, lng: 174.686845}},
+];
 
 // Create a new map and set it to my neighbourhood at the zoom level I want.
 function initMap() {
