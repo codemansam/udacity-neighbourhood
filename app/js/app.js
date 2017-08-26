@@ -2,9 +2,11 @@
 
 var map;
 var markers = [];
+var styles = [];
 
 // Make map look cooler with this style (style 94/san-andreas) from snazzymaps.com
-var styles =
+styles =
+
 [
     {
         "featureType": "road",
