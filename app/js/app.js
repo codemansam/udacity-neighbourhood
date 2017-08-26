@@ -217,3 +217,24 @@ var markerImage = new google.maps.MarkerImage(
   new google.maps.Size(21,34));
 return markerImage;
 }
+
+// Function iterates through locations array and makes a marker based on the lat lng.
+
+function makeMarkers() {
+	for (var i = 0; i < locations.length; i++) {
+		// Get the position from the location array.
+		var position = locations[i].location;
+		var title = locations[i].title;
+		// Create a marker per location, and put into markers array.
+		var marker = new google.maps.Marker({
+		position: position,
+		title: title,
+		animation: google.maps.Animation.DROP,
+		icon: defaultIcon,
+		id: i
+
+		});
+	}
+	markers.push(marker);
+
+}
