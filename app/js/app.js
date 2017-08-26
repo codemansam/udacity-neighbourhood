@@ -4,8 +4,8 @@ var map;
 var markers = [];  // Will hold the markers for the restaurants.
 var styles = []; // will hold the map styles.
 var locations = []; // will hold location information for the restaurants.
-var defaultMarker = makeMarkerIcon('0091ff');
-var selectedMarker = makeMarkerIcon('FFFF24')
+// var defaultMarker = makeMarkerIcon('0091ff');
+// var selectedMarker = makeMarkerIcon('FFFF24')
 
 // Make map look cooler with this style (style 94/san-andreas) from snazzymaps.com
 styles =
@@ -203,7 +203,8 @@ function initMap() {
 // Makes sure the window has loaded before trying to initialize map.
 window.onload = function() {
 
-	initMap();	
+	initMap();
+	makeMarkers();	
 }
 // Function creates markers with a color parameter.
 
@@ -232,11 +233,15 @@ function makeMarkers() {
 		position: position,
 		title: title,
 		animation: google.maps.Animation.DROP,
-		icon: defaultIcon,
+		//icon: defaultIcon,
 		id: i
 
 		});
+		// Add each marker to markers array and
+		// place on map
+		markers.push(marker);
+		marker.setMap(map);
 	}
-	markers.push(marker);
+
 
 }
