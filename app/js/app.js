@@ -4,6 +4,8 @@ var map;
 var markers = [];  // Will hold the markers for the restaurants.
 var styles = []; // will hold the map styles.
 var locations = []; // will hold location information for the restaurants.
+var defaultMarker = makeMarkerIcon('0091ff');
+var selectedMarker = makeMarkerIcon('FFFF24')
 
 // Make map look cooler with this style (style 94/san-andreas) from snazzymaps.com
 styles =
